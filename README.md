@@ -10,6 +10,8 @@ This project showcases:
 End-to-end pipeline: from data cleaning and model training to deployment
 A simple GUI for user interaction
 Easy customization for any text classification problem
+
+
 📌 Features
 Cleaned dataset from Kaggle (Fake.csv and True.csv)
 TF-IDF Vectorization for feature extraction
@@ -17,6 +19,8 @@ Passive Aggressive Classifier for classification
 Model saved using pickle
 GUI built with Streamlit
 Easy to use, train, and extend
+
+
 📂 Project Structure
 Fake News Detection/
 ├── app.py # Streamlit web app
@@ -31,11 +35,14 @@ Fake News Detection/
 ├── requirements.txt # Project dependencies
 ├── README.md # Project documentation
 └── venv/ # Virtual environment (excluded from GitHub)
+
+
 🔍 Dataset
 Source: Kaggle: Fake and Real News Dataset
-
 Fake.csv: Fake news articles
 True.csv: Real news articles
+
+
 🚀 How to Run the App
 ✅ Step 1: Clone the Repository
 git clone https://github.com/Prashantsingh0907/Fake-News-Detection.git
