@@ -1,55 +1,53 @@
-# Fake-News-Detection
-📰 Fake News Detection Project: Overview
-🎯 Objective
-To develop a machine learning-based system that can automatically classify news articles or social media posts as real or fake, helping combat misinformation and promote trustworthy content online.
+📰 Fake News Detection using Machine Learning
+This project is a machine learning-based application that detects whether a news article is real or fake using Natural Language Processing (NLP) techniques and a Passive Aggressive Classifier.
 
-🔍 Problem Statement
-With the rise of digital media, fake news has become a major threat to public discourse, influencing opinions, elections, and even public health. Manual fact-checking is slow and resource-intensive. This project aims to automate the detection process using Natural Language Processing (NLP) and machine learning techniques.
+It leverages a cleaned dataset from Kaggle containing thousands of real and fake news articles. The raw text is preprocessed and converted into numerical features using TF-IDF vectorization, then fed into the classifier to learn patterns and detect misinformation.
 
-🧠 Core Concepts & Technologies
-📚 Data Collection
-Sources: Kaggle datasets (e.g., Fake News Detection, LIAR dataset), news APIs, or scraped articles.
+The goal is to provide a lightweight, interpretable model that can be deployed as a web app using Streamlit, allowing users to input a news headline or paragraph and get a prediction instantly.
 
-Features: Title, text content, author, publication date, source.
+This project showcases:
 
-🛠️ Preprocessing
-Tokenization, stopword removal, stemming/lemmatization
+End-to-end pipeline: from data cleaning and model training to deployment
+A simple GUI for user interaction
+Easy customization for any text classification problem
+📌 Features
+Cleaned dataset from Kaggle (Fake.csv and True.csv)
+TF-IDF Vectorization for feature extraction
+Passive Aggressive Classifier for classification
+Model saved using pickle
+GUI built with Streamlit
+Easy to use, train, and extend
+📂 Project Structure
+Fake News Detection/
+├── app.py # Streamlit web app
+├── data/
+│ ├── True.csv
+│ └── Fake.csv
+├── models/
+│ ├── fake_news_model.pkl
+│ └── tfidf_vectorizer.pkl
+├── fake_news_detection.ipynb # Jupyter Notebook with full training steps
+├── predict.py # CLI-based usage (optional)
+├── requirements.txt # Project dependencies
+├── README.md # Project documentation
+└── venv/ # Virtual environment (excluded from GitHub)
+🔍 Dataset
+Source: Kaggle: Fake and Real News Dataset
 
-Vectorization using TF-IDF or word embeddings (Word2Vec, GloVe, BERT)
-
-🤖 Modeling Techniques
-Model Type	Examples	Notes
-Traditional ML	Logistic Regression, SVM, Naive Bayes	Fast and interpretable
-Deep Learning	LSTM, GRU, CNN for text	Captures context and semantics
-Transformer-based	BERT, RoBERTa	State-of-the-art performance
-🧪 Evaluation Metrics
-Accuracy, Precision, Recall, F1-score
-
-Confusion Matrix for detailed error analysis
-
-🧩 Project Workflow
-Data Ingestion: Load and clean the dataset
-
-Text Preprocessing: Normalize and vectorize text
-
-Model Training: Train multiple models and tune hyperparameters
-
-Evaluation: Compare models and select the best-performing one
-
-Deployment (Optional): Build a web app using Flask or Streamlit for real-time predictions
-
-🌐 Real-World Applications
-Social Media Monitoring: Flagging misinformation on platforms like Twitter or Facebook
-
-News Aggregators: Filtering unreliable sources
-
-Fact-Checking Tools: Assisting journalists and researchers
-
-💡 Enhancements & Future Scope
-Multilingual fake news detection
-
-Incorporating image/video analysis for multimodal detection
-
-Explainable AI to justify predictions
-
-Real-time streaming data classification
+Fake.csv: Fake news articles
+True.csv: Real news articles
+🚀 How to Run the App
+✅ Step 1: Clone the Repository
+git clone https://github.com/Prashantsingh0907/Fake-News-Detection.git
+cd Fake-News-Detection
+✅ Step 2: Create and activate a virtual environment
+For Windows:
+python -m venv venv
+venv\Scripts\activate
+For macOS/Linux:
+python3 -m venv venv
+source venv/bin/activate
+✅ Step 3: Install required Python libraries
+pip install -r requirements.txt
+✅ Step 4: Launch the Streamlit GUI
+streamlit run app.py
